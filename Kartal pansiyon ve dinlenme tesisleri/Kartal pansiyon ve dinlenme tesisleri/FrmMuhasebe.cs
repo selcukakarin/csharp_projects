@@ -66,7 +66,7 @@ namespace Kartal_pansiyon_ve_dinlenme_tesisleri
             this.dataGridView3.Rows.Clear();
             while (oku.Read())
             {
-                DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                DataGridViewRow row = (DataGridViewRow)dataGridView3.Rows[0].Clone();
                 row.Cells[0].Value = oku["PersonelId"].ToString();
                 row.Cells[1].Value = oku["Adi"].ToString();
                 row.Cells[2].Value = oku["Soyadi"].ToString();

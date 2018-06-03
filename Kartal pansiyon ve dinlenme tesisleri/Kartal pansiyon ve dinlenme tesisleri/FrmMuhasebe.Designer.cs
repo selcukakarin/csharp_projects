@@ -1040,11 +1040,11 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.Location = new System.Drawing.Point(74, 37);
+            this.label13.Location = new System.Drawing.Point(42, 32);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(83, 20);
+            this.label13.Size = new System.Drawing.Size(106, 20);
             this.label13.TabIndex = 139;
-            this.label13.Text = "Ürün İsim :";
+            this.label13.Text = "Personel İsim :";
             // 
             // tabPage5
             // 

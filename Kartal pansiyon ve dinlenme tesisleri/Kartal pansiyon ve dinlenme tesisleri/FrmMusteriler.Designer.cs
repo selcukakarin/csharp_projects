@@ -30,17 +30,6 @@
         {
             this.btnVerileriGoster = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.İsim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Soyisim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cinsiyet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OdaNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ücret = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GirişTarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ÇıkışTarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnAra = new System.Windows.Forms.Button();
@@ -67,6 +56,17 @@
             this.txtAra = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnTemizle = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.İsim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Soyisim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cinsiyet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OdaNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ücret = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GirişTarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ÇıkışTarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,61 +102,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1145, 243);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick_1);
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Column1";
-            this.Id.Name = "Id";
-            // 
-            // İsim
-            // 
-            this.İsim.HeaderText = "Column1";
-            this.İsim.Name = "İsim";
-            // 
-            // Soyisim
-            // 
-            this.Soyisim.HeaderText = "Column1";
-            this.Soyisim.Name = "Soyisim";
-            // 
-            // Cinsiyet
-            // 
-            this.Cinsiyet.HeaderText = "Column1";
-            this.Cinsiyet.Name = "Cinsiyet";
-            // 
-            // Telefon
-            // 
-            this.Telefon.HeaderText = "Column1";
-            this.Telefon.Name = "Telefon";
-            // 
-            // Mail
-            // 
-            this.Mail.HeaderText = "Column1";
-            this.Mail.Name = "Mail";
-            // 
-            // Tc
-            // 
-            this.Tc.HeaderText = "Column1";
-            this.Tc.Name = "Tc";
-            // 
-            // OdaNo
-            // 
-            this.OdaNo.HeaderText = "Column1";
-            this.OdaNo.Name = "OdaNo";
-            // 
-            // Ücret
-            // 
-            this.Ücret.HeaderText = "Column1";
-            this.Ücret.Name = "Ücret";
-            // 
-            // GirişTarihi
-            // 
-            this.GirişTarihi.HeaderText = "Column1";
-            this.GirişTarihi.Name = "GirişTarihi";
-            // 
-            // ÇıkışTarihi
-            // 
-            this.ÇıkışTarihi.HeaderText = "Column1";
-            this.ÇıkışTarihi.Name = "ÇıkışTarihi";
             // 
             // btnGuncelle
             // 
@@ -417,6 +362,61 @@
             this.btnTemizle.UseVisualStyleBackColor = true;
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            // 
+            // İsim
+            // 
+            this.İsim.HeaderText = "İsim";
+            this.İsim.Name = "İsim";
+            // 
+            // Soyisim
+            // 
+            this.Soyisim.HeaderText = "Soyisim";
+            this.Soyisim.Name = "Soyisim";
+            // 
+            // Cinsiyet
+            // 
+            this.Cinsiyet.HeaderText = "Cinsiyet";
+            this.Cinsiyet.Name = "Cinsiyet";
+            // 
+            // Telefon
+            // 
+            this.Telefon.HeaderText = "Telefon";
+            this.Telefon.Name = "Telefon";
+            // 
+            // Mail
+            // 
+            this.Mail.HeaderText = "Mail";
+            this.Mail.Name = "Mail";
+            // 
+            // Tc
+            // 
+            this.Tc.HeaderText = "Tc";
+            this.Tc.Name = "Tc";
+            // 
+            // OdaNo
+            // 
+            this.OdaNo.HeaderText = "OdaNo";
+            this.OdaNo.Name = "OdaNo";
+            // 
+            // Ücret
+            // 
+            this.Ücret.HeaderText = "Ücret";
+            this.Ücret.Name = "Ücret";
+            // 
+            // GirişTarihi
+            // 
+            this.GirişTarihi.HeaderText = "GirişTarihi";
+            this.GirişTarihi.Name = "GirişTarihi";
+            // 
+            // ÇıkışTarihi
+            // 
+            this.ÇıkışTarihi.HeaderText = "CıkışTarihi";
+            this.ÇıkışTarihi.Name = "ÇıkışTarihi";
+            // 
             // FrmMusteriler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -466,17 +466,6 @@
         #endregion
         private System.Windows.Forms.Button btnVerileriGoster;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn İsim;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Soyisim;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cinsiyet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Mail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OdaNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ücret;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GirişTarihi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ÇıkışTarihi;
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnAra;
@@ -503,5 +492,16 @@
         private System.Windows.Forms.TextBox txtAra;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnTemizle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn İsim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Soyisim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cinsiyet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OdaNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ücret;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GirişTarihi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ÇıkışTarihi;
     }
 }

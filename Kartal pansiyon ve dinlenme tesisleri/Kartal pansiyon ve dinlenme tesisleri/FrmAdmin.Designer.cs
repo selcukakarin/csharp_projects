@@ -60,6 +60,7 @@
             this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sifre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -277,6 +278,7 @@
             this.Telefon,
             this.Mail,
             this.Tc,
+            this.Adres,
             this.Sifre});
             this.dataGridView1.Location = new System.Drawing.Point(-29, 363);
             this.dataGridView1.Name = "dataGridView1";
@@ -361,6 +363,11 @@
             this.Tc.HeaderText = "Tc";
             this.Tc.Name = "Tc";
             // 
+            // Adres
+            // 
+            this.Adres.HeaderText = "Adres";
+            this.Adres.Name = "Adres";
+            // 
             // Sifre
             // 
             this.Sifre.HeaderText = "Şifre";
@@ -439,6 +446,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefon;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mail;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Adres;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sifre;
     }
 }

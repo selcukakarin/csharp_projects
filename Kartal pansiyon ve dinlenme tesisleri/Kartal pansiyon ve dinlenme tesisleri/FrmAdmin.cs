@@ -32,7 +32,8 @@ namespace Kartal_pansiyon_ve_dinlenme_tesisleri
                 row.Cells[4].Value = oku["Telefon"].ToString();
                 row.Cells[5].Value = oku["Mail"].ToString();
                 row.Cells[6].Value = oku["Tc"].ToString();
-                row.Cells[7].Value = oku["Sifre"].ToString();
+                row.Cells[7].Value = oku["Adres"].ToString();
+                row.Cells[8].Value = oku["Sifre"].ToString();
                 dataGridView1.Rows.Add(row);
             }
             baglanti.Close();
@@ -53,7 +54,8 @@ namespace Kartal_pansiyon_ve_dinlenme_tesisleri
             baglanti.Open();
             SqlCommand komut = new SqlCommand("update Admin set Adi='" + TxtAdi.Text + "',Soyadi='" +
                                             TxtSoyadi.Text + "',Cinsiyet='" + CboxCinsiyet.Text + "',Telefon='" +
-                                            MskTxtTelefon.Text + "',Mail='" + TxtMail.Text + "',Tc='" + TxtTc.Text + "',Sifre='"+txtSifre.Text+"'where AdminId='" +
+                                            MskTxtTelefon.Text + "',Mail='" + TxtMail.Text + "',Tc='" + TxtTc.Text +
+                                            "',Adres='" + TxtOdaNo.Text + "',Sifre='" + txtSifre.Text+"'where AdminId='" +
                                             dataGridView1.SelectedRows[0].Cells[0].Value + "'", baglanti);
             komut.ExecuteNonQuery();
             baglanti.Close();
@@ -85,7 +87,7 @@ namespace Kartal_pansiyon_ve_dinlenme_tesisleri
         private void button1_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("insert into Admin(Adi,Soyadi,Cinsiyet,Telefon,Mail,Tc,Sifre) values ('" + TxtAdi.Text + "','" + TxtSoyadi.Text + "','" + CboxCinsiyet.Text + "','" + MskTxtTelefon.Text + "','" + TxtMail.Text + "','" + TxtTc.Text + "','"+txtSifre.Text+"')", baglanti);
+            SqlCommand komut = new SqlCommand("insert into Admin(Adi,Soyadi,Cinsiyet,Telefon,Mail,Tc,Adres,Sifre) values ('" + TxtAdi.Text + "','" + TxtSoyadi.Text + "','" + CboxCinsiyet.Text + "','" + MskTxtTelefon.Text + "','" + TxtMail.Text + "','" + TxtTc.Text + "','" + TxtOdaNo.Text + "','" + txtSifre.Text+"')", baglanti);
             komut.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Admin kaydı yapıldı.");
@@ -108,7 +110,8 @@ namespace Kartal_pansiyon_ve_dinlenme_tesisleri
                 row.Cells[4].Value = oku["Telefon"].ToString();
                 row.Cells[5].Value = oku["Mail"].ToString();
                 row.Cells[6].Value = oku["Tc"].ToString();
-                row.Cells[7].Value = oku["Sifre"].ToString();
+                row.Cells[7].Value = oku["Adres"].ToString();
+                row.Cells[8].Value = oku["Sifre"].ToString();
 
                 dataGridView1.Rows.Add(row);
             }
@@ -123,7 +126,8 @@ namespace Kartal_pansiyon_ve_dinlenme_tesisleri
             MskTxtTelefon.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
             TxtMail.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
             TxtTc.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
-            txtSifre.Text= dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
+            TxtOdaNo.Text = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
+            txtSifre.Text= dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
         }
     }
 }
