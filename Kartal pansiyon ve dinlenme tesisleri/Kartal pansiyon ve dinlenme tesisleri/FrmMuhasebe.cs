@@ -191,11 +191,12 @@ namespace Kartal_pansiyon_ve_dinlenme_tesisleri
                 row.Cells[1].Value = oku["UrunAdi"].ToString();
                 row.Cells[2].Value = oku["UrunAdet"].ToString();
                 row.Cells[3].Value = oku["PersonelId"].ToString();
-                row.Cells[3].Value = oku["SaticiFirma"].ToString();
-                row.Cells[4].Value = oku["SaticiFirmaTel"].ToString();
-                row.Cells[5].Value = oku["EkAciklama"].ToString();
-                row.Cells[6].Value = oku["SatinAlmaTarihi"].ToString();
-                row.Cells[7].Value = oku["BirimFiyat"].ToString();
+                row.Cells[4].Value = oku["SaticiFirma"].ToString();
+                row.Cells[5].Value = oku["SaticiFirmaTel"].ToString();
+                row.Cells[6].Value = oku["EkAciklama"].ToString();
+                row.Cells[7].Value = oku["SatinAlmaTarihi"].ToString();
+                row.Cells[8].Value = oku["BirimFiyat"].ToString();
+                row.Cells[9].Value = oku["UrunKod"].ToString();
                 dataGridView1.Rows.Add(row);
             }
             baglanti.Close();
@@ -287,7 +288,7 @@ namespace Kartal_pansiyon_ve_dinlenme_tesisleri
         private void button5_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("select * from IsletmeGider where GiderAdi like '%" + txtGider.Text + "%'", baglanti);
+            SqlCommand komut = new SqlCommand("select * from IsletmeGider where GiderAdi like '%" + txtAraIsletmeGider.Text + "%'", baglanti);
             SqlDataReader oku = komut.ExecuteReader();
             this.dataGridView2.Rows.Clear();
             while (oku.Read())
@@ -297,8 +298,8 @@ namespace Kartal_pansiyon_ve_dinlenme_tesisleri
                 row.Cells[1].Value = oku["GiderAdi"].ToString();
                 row.Cells[2].Value = oku["GiderFiyat"].ToString();
                 row.Cells[3].Value = oku["SorumluPersonelId"].ToString();
-                row.Cells[3].Value = oku["EkAciklama"].ToString();
-                row.Cells[4].Value = oku["OdenmeTarihi"].ToString();
+                row.Cells[4].Value = oku["EkAciklama"].ToString();
+                row.Cells[5].Value = oku["OdenmeTarihi"].ToString();
                 dataGridView2.Rows.Add(row);
             }
             baglanti.Close();

@@ -107,15 +107,6 @@
             this.button8 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.İsim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Soyisim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cinsiyet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OdaNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ücret = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
@@ -131,6 +122,15 @@
             this.button14 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.İsim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Soyisim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cinsiyet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ücret = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -941,58 +941,13 @@
             this.Telefon,
             this.Mail,
             this.Tc,
-            this.OdaNo,
+            this.Adres,
             this.Ücret});
             this.dataGridView3.Location = new System.Drawing.Point(25, 376);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView3.Size = new System.Drawing.Size(1145, 243);
             this.dataGridView3.TabIndex = 146;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // İsim
-            // 
-            this.İsim.HeaderText = "İsim";
-            this.İsim.Name = "İsim";
-            // 
-            // Soyisim
-            // 
-            this.Soyisim.HeaderText = "Soyisim";
-            this.Soyisim.Name = "Soyisim";
-            // 
-            // Cinsiyet
-            // 
-            this.Cinsiyet.HeaderText = "Cinsiyet";
-            this.Cinsiyet.Name = "Cinsiyet";
-            // 
-            // Telefon
-            // 
-            this.Telefon.HeaderText = "Telefon";
-            this.Telefon.Name = "Telefon";
-            // 
-            // Mail
-            // 
-            this.Mail.HeaderText = "Mail";
-            this.Mail.Name = "Mail";
-            // 
-            // Tc
-            // 
-            this.Tc.HeaderText = "Tc";
-            this.Tc.Name = "Tc";
-            // 
-            // OdaNo
-            // 
-            this.OdaNo.HeaderText = "OdaNo";
-            this.OdaNo.Name = "OdaNo";
-            // 
-            // Ücret
-            // 
-            this.Ücret.HeaderText = "Maaş";
-            this.Ücret.Name = "Ücret";
             // 
             // button9
             // 
@@ -1142,6 +1097,51 @@
             this.label15.TabIndex = 148;
             this.label15.Text = "Ürün İsim :";
             // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // İsim
+            // 
+            this.İsim.HeaderText = "İsim";
+            this.İsim.Name = "İsim";
+            // 
+            // Soyisim
+            // 
+            this.Soyisim.HeaderText = "Soyisim";
+            this.Soyisim.Name = "Soyisim";
+            // 
+            // Cinsiyet
+            // 
+            this.Cinsiyet.HeaderText = "Cinsiyet";
+            this.Cinsiyet.Name = "Cinsiyet";
+            // 
+            // Telefon
+            // 
+            this.Telefon.HeaderText = "Telefon";
+            this.Telefon.Name = "Telefon";
+            // 
+            // Mail
+            // 
+            this.Mail.HeaderText = "Mail";
+            this.Mail.Name = "Mail";
+            // 
+            // Tc
+            // 
+            this.Tc.HeaderText = "Tc";
+            this.Tc.Name = "Tc";
+            // 
+            // Adres
+            // 
+            this.Adres.HeaderText = "Adres";
+            this.Adres.Name = "Adres";
+            // 
+            // Ücret
+            // 
+            this.Ücret.HeaderText = "Maaş";
+            this.Ücret.Name = "Ücret";
+            // 
             // FrmMuhasebe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1240,15 +1240,6 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn İsim;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Soyisim;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cinsiyet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Mail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OdaNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ücret;
         private System.Windows.Forms.Label lblToplamKazanc;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label lblUrunGider;
@@ -1275,5 +1266,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AlınmaTarihi;
         private System.Windows.Forms.DataGridViewTextBoxColumn BirimFiyat;
         private System.Windows.Forms.DataGridViewTextBoxColumn UrunKod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn İsim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Soyisim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cinsiyet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Adres;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ücret;
     }
 }
