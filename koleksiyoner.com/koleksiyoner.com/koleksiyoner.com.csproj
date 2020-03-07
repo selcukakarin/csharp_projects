@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5FF6237D-DFCF-4FD1-9E21-4CC33EA76E7C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>koleksiyoner.com</RootNamespace>
+    <AssemblyName>koleksiyoner.com</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminGiris.aspx" />
+    <Content Include="AdminUrunEkle.aspx" />
+    <Content Include="AdminUrunListe.aspx" />
+    <Content Include="css\datePicker.css" />
+    <Content Include="css\pro_dropline.css" />
+    <Content Include="css\pro_dropline_ie.css" />
+    <Content Include="css\screen.css" />
+    <Content Include="ForumKonuAc.aspx" />
+    <Content Include="ForumKonuGuncelle.aspx" />
+    <Content Include="ForumKonuSilGuncelle.aspx" />
+    <Content Include="ForumKonuYorum.aspx" />
+    <Content Include="images\addtocart.gif" />
+    <Content Include="images\bann1.jpg" />
+    <Content Include="images\bann2.jpg" />
+    <Content Include="images\bar_bg.gif" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\big_pic.jpg" />
+    <Content Include="images\blue-add.png" />
+    <Content Include="images\camera.png" />
+    <Content Include="images\car.png" />
+    <Content Include="images\cart.gif" />
+    <Content Include="images\cart_bg.gif" />
+    <Content Include="images\checked.png" />
+    <Content Include="images\compare.gif" />
+    <Content Include="images\contact-new.png" />
+    <Content Include="images\contact_bt.gif" />
+    <Content Include="images\csscreme.jpg" />
+    <Content Include="images\de.gif" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\deneme.jpg" />
+    <Content Include="images\details_box_bottom.gif" />
+    <Content Include="images\details_box_center.gif" />
+    <Content Include="images\details_box_top.gif" />
+    <Content Include="images\details_bt_bg.gif" />
+    <Content Include="images\details_bt_bg.png" />
+    <Content Include="images\en.gif" />
+    <Content Include="images\eskipara-tn.jpg" />
+    <Content Include="images\eskipara.jpg" />
+    <Content Include="images\eskipara2-tn.jpg" />
+    <Content Include="images\eskipara2.jpg" />
+    <Content Include="images\exit.png" />
+    <Content Include="images\favorites.gif" />
+    <Content Include="images\favorites.png" />
+    <Content Include="images\favs.gif" />
+    <Content Include="images\favs.png" />
+    <Content Include="images\footer_bg.gif" />
+    <Content Include="images\footer_logo.png" />
+    <Content Include="images\forms\bg_related_act.gif" />
+    <Content Include="images\forms\bubble_inner.gif" />
+    <Content Include="images\forms\bubble_left.gif" />
+    <Content Include="images\forms\bubble_right.gif" />
+    <Content Include="images\forms\choose-file.gif" />
+    <Content Include="images\forms\error_left.gif" />
+    <Content Include="images\forms\error_right.gif" />
+    <Content Include="images\forms\form_inp.gif" />
+    <Content Include="images\forms\form_inp_error.gif" />
+    <Content Include="images\forms\form_reset.gif" />
+    <Content Include="images\forms\form_select.gif" />
+    <Content Include="images\forms\form_select_small.gif" />
+    <Content Include="images\forms\form_submit.gif" />
+    <Content Include="images\forms\form_textarea.gif" />
+    <Content Include="images\forms\header_related_act.gif" />
+    <Content Include="images\forms\icon_calendar.jpg" />
+    <Content Include="images\forms\icon_edit.gif" />
+    <Content Include="images\forms\icon_list_arrow.gif" />
+    <Content Include="images\forms\icon_minus.gif" />
+    <Content Include="images\forms\icon_plus.gif" />
+    <Content Include="images\forms\lines_dotted_short.gif" />
+    <Content Include="images\forms\step_1.gif" />
+    <Content Include="images\forms\step_dark_left.gif" />
+    <Content Include="images\forms\step_dark_right.gif" />
+    <Content Include="images\forms\step_dark_round.gif" />
+    <Content Include="images\forms\step_light_left.gif" />
+    <Content Include="images\forms\step_light_right.gif" />
+    <Content Include="images\forms\step_light_round.gif" />
+    <Content Include="images\forms\upload_file.gif" />
+    <Content Include="images\header_bg.jpg" />
+    <Content Include="images\header_divider.png" />
+    <Content Include="images\home.png" />
+    <Content Include="images\iphone.png" />
+    <Content Include="images\laptop.gif" />
+    <Content Include="images\laptop.png" />
+    <Content Include="images\login\icon_back_login.gif" />
+    <Content Include="images\login\inp_login.gif" />
+    <Content Include="images\login\loginbox_bg.png" />
+    <Content Include="images\login\login_bg.jpg" />
+    <Content Include="images\login\submit_login.gif" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\menu_bg.gif" />
+    <Content Include="images\menu_divider.gif" />
+    <Content Include="images\menu_left.gif" />
+    <Content Include="images\menu_right.gif" />
+    <Content Include="images\menu_title_bg.gif" />
+    <Content Include="images\navbullet.png" />
+    <Content Include="images\p1.gif" />
+    <Content Include="images\p2.gif" />
+    <Content Include="images\p4.gif" />
+    <Content Include="images\p5.gif" />
+    <Content Include="images\pag_bg.gif" />
+    <Content Include="images\pag_bg.png" />
+    <Content Include="images\pag_bg_a.gif" />
+    <Content Include="images\pag_bg_a.png" />
+    <Content Include="images\para.jpg" />
+    <Content Include="images\payment.gif" />
+    <Content Include="images\products_details_bg.gif" />
+    <Content Include="images\product_box_bottom.gif" />
+    <Content Include="images\product_box_center.gif" />
+    <Content Include="images\product_box_top.gif" />
+    <Content Include="images\profil.jpg" />
+    <Content Include="images\pul.jpg" />
+    <Content Include="images\pul2.jpg" />
+    <Content Include="images\search.gif" />
+    <Content Include="images\services.png" />
+    <Content Include="images\shared\blank.gif" />
+    <Content Include="images\shared\border_bit.jpg" />
+    <Content Include="images\shared\cal_th_repeat.jpg" />
+    <Content Include="images\shared\cal_top_bg.jpg" />
+    <Content Include="images\shared\cal_top_repeat.jpg" />
+    <Content Include="images\shared\checkbox.gif" />
+    <Content Include="images\shared\content_repeat.jpg" />
+    <Content Include="images\shared\corner_bottom_left.jpg" />
+    <Content Include="images\shared\corner_bottom_right.jpg" />
+    <Content Include="images\shared\corner_top_left.jpg" />
+    <Content Include="images\shared\corner_top_right.jpg" />
+    <Content Include="images\shared\icon_idlogo.jpg" />
+    <Content Include="images\shared\logo.png" />
+    <Content Include="images\shared\nav\account_drop_bg.gif" />
+    <Content Include="images\shared\nav\account_line.gif" />
+    <Content Include="images\shared\nav\back_0.gif" />
+    <Content Include="images\shared\nav\back_1x.gif" />
+    <Content Include="images\shared\nav\Copy of pro_line_1.gif" />
+    <Content Include="images\shared\nav\divider.jpg" />
+    <Content Include="images\shared\nav\icon_acc_inbox.gif" />
+    <Content Include="images\shared\nav\icon_acc_personal.gif" />
+    <Content Include="images\shared\nav\icon_acc_projects.gif" />
+    <Content Include="images\shared\nav\icon_acc_settings.gif" />
+    <Content Include="images\shared\nav\icon_acc_stats.gif" />
+    <Content Include="images\shared\nav\nav_logout.gif" />
+    <Content Include="images\shared\nav\nav_myaccount.gif" />
+    <Content Include="images\shared\nav\pro_line_0x.gif" />
+    <Content Include="images\shared\nav\pro_line_1.gif" />
+    <Content Include="images\shared\nav\pro_line_2.gif" />
+    <Content Include="images\shared\nav\repeat.jpg" />
+    <Content Include="images\shared\side_shadowleft.jpg" />
+    <Content Include="images\shared\side_shadowright.jpg" />
+    <Content Include="images\shared\top_bg.jpg" />
+    <Content Include="images\shared\top_search_btn.gif" />
+    <Content Include="images\shared\top_search_inp.gif" />
+    <Content Include="images\shared\top_search_select.gif" />
+    <Content Include="images\shared\year_next.gif" />
+    <Content Include="images\shared\year_prev.gif" />
+    <Content Include="images\shoppingcart.png" />
+    <Content Include="images\sirket.jpg" />
+    <Content Include="images\square-blue-add.gif" />
+    <Content Include="images\table\actions_slider_bg.gif" />
+    <Content Include="images\table\action_delete.gif" />
+    <Content Include="images\table\action_edit.gif" />
+    <Content Include="images\table\content_round_repeat.jpg" />
+    <Content Include="images\table\content_round_top.jpg" />
+    <Content Include="images\table\dropdown_actions.gif" />
+    <Content Include="images\table\icon_close_blue.gif" />
+    <Content Include="images\table\icon_close_green.gif" />
+    <Content Include="images\table\icon_close_red.gif" />
+    <Content Include="images\table\icon_close_yellow.gif" />
+    <Content Include="images\table\message_blue.gif" />
+    <Content Include="images\table\message_green.gif" />
+    <Content Include="images\table\message_red.gif" />
+    <Content Include="images\table\message_yellow.gif" />
+    <Content Include="images\table\paging_far_left.gif" />
+    <Content Include="images\table\paging_far_right.gif" />
+    <Content Include="images\table\paging_left.gif" />
+    <Content Include="images\table\paging_right.gif" />
+    <Content Include="images\table\select_number_rows.gif" />
+    <Content Include="images\table\table_header.jpg" />
+    <Content Include="images\table\table_header_checkbox.jpg" />
+    <Content Include="images\table\table_header_options.jpg" />
+    <Content Include="images\table\table_header_repeat.jpg" />
+    <Content Include="images\table\table_icon_1.gif" />
+    <Content Include="images\table\table_icon_2.gif" />
+    <Content Include="images\table\table_icon_3.gif" />
+    <Content Include="images\table\table_icon_4.gif" />
+    <Content Include="images\table\table_icon_5.gif" />
+    <Content Include="images\table\table_sort_arrow.gif" />
+    <Content Include="images\thumb1.gif" />
+    <Content Include="images\thumb2.gif" />
+    <Content Include="images\top_search_bg.gif" />
+    <Content Include="images\update.png" />
+    <Content Include="images\user_add.png" />
+    <Content Include="js\boxOver.js" />
+    <Content Include="js\jquery\Copy of custom_jquery.js" />
+    <Content Include="js\jquery\custom_jquery.js" />
+    <Content Include="js\jquery\date.js" />
+    <Content Include="js\jquery\jquery-1.4.1.min.js" />
+    <Content Include="js\jquery\jquery.bind.js" />
+    <Content Include="js\jquery\jquery.datePicker.js" />
+    <Content Include="js\jquery\jquery.dimensions.js" />
+    <Content Include="js\jquery\jquery.filestyle.js" />
+    <Content Include="js\jquery\jquery.pngFix.pack.js" />
+    <Content Include="js\jquery\jquery.selectbox-0.5.js" />
+    <Content Include="js\jquery\jquery.selectbox-0.5_style_2.js" />
+    <Content Include="js\jquery\jquery.selectbox-0.5_style_3.js" />
+    <Content Include="js\jquery\jquery.tooltip.js" />
+    <Content Include="js\jquery\jquery.usermode.js" />
+    <Content Include="js\jquery\ui.checkbox.js" />
+    <Content Include="js\jquery\ui.core.js" />
+    <Content Include="js\windowopen.js" />
+    <Content Include="KullaniciGiris.aspx" />
+    <Content Include="KullaniciKaydol.aspx" />
+    <Content Include="KullaniciProfilGuncelle.aspx" />
+    <Content Include="KullaniciUrunEkle.aspx" />
+    <Content Include="KullaniciUrunGuncelle.aspx" />
+    <Content Include="KullaniciUrunSilGuncelle.aspx" />
+    <Content Include="SiteAnasayfa.aspx" />
+    <Content Include="blank.gif" />
+    <Content Include="iecss.css" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SiteForum.aspx" />
+    <Content Include="SiteHakkimizda.aspx" />
+    <Content Include="SiteIletisim.aspx" />
+    <Content Include="SiteMaster.Master" />
+    <Content Include="sliderengine\amazingslider-1.css" />
+    <Content Include="sliderengine\amazingslider.js" />
+    <Content Include="sliderengine\bottomshadow-110-95-4.png" />
+    <Content Include="sliderengine\carouselarrows-32-32-0.png" />
+    <Content Include="sliderengine\froogaloop2.min.js" />
+    <Content Include="sliderengine\html5boxplayer.swf" />
+    <Content Include="sliderengine\html5boxplayer_fullscreen.png" />
+    <Content Include="sliderengine\html5boxplayer_hd.png" />
+    <Content Include="sliderengine\html5boxplayer_playpause.png" />
+    <Content Include="sliderengine\html5boxplayer_playvideo.png" />
+    <Content Include="sliderengine\html5boxplayer_volume.png" />
+    <Content Include="sliderengine\initslider-1.js" />
+    <Content Include="sliderengine\jquery.js" />
+    <Content Include="sliderengine\lightbox-close.png" />
+    <Content Include="sliderengine\lightbox-loading.gif" />
+    <Content Include="sliderengine\lightbox-navnext.png" />
+    <Content Include="sliderengine\lightbox-navprev.png" />
+    <Content Include="sliderengine\lightbox-next.png" />
+    <Content Include="sliderengine\lightbox-pause.png" />
+    <Content Include="sliderengine\lightbox-play.png" />
+    <Content Include="sliderengine\lightbox-playvideo.png" />
+    <Content Include="sliderengine\lightbox-prev.png" />
+    <Content Include="sliderengine\navarrows-20-20-0.png" />
+    <Content Include="sliderengine\navplaypause-20-20-0.png" />
+    <Content Include="sliderengine\playvideo-64-64-0.png" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="SiteKullanici.Master" />
+    <Content Include="images\Thumbs.db" />
+    <Content Include="images\forms\Thumbs.db" />
+    <Content Include="images\login\Thumbs.db" />
+    <Content Include="images\shared\nav\Thumbs.db" />
+    <Content Include="images\shared\Thumbs.db" />
+    <Content Include="images\table\Thumbs.db" />
+    <Content Include="AdminMaster.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="style.css" />
+    <Content Include="UrunDetay.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminGiris.aspx.cs">
+      <DependentUpon>AdminGiris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminGiris.aspx.designer.cs">
+      <DependentUpon>AdminGiris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUrunEkle.aspx.cs">
+      <DependentUpon>AdminUrunEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUrunEkle.aspx.designer.cs">
+      <DependentUpon>AdminUrunEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUrunListe.aspx.cs">
+      <DependentUpon>AdminUrunListe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUrunListe.aspx.designer.cs">
+      <DependentUpon>AdminUrunListe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="esqlbaglantisi.cs" />
+    <Compile Include="ForumKonuAc.aspx.cs">
+      <DependentUpon>ForumKonuAc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForumKonuAc.aspx.designer.cs">
+      <DependentUpon>ForumKonuAc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForumKonuGuncelle.aspx.cs">
+      <DependentUpon>ForumKonuGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForumKonuGuncelle.aspx.designer.cs">
+      <DependentUpon>ForumKonuGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForumKonuSilGuncelle.aspx.cs">
+      <DependentUpon>ForumKonuSilGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForumKonuSilGuncelle.aspx.designer.cs">
+      <DependentUpon>ForumKonuSilGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForumKonuYorum.aspx.cs">
+      <DependentUpon>ForumKonuYorum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForumKonuYorum.aspx.designer.cs">
+      <DependentUpon>ForumKonuYorum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciGiris.aspx.cs">
+      <DependentUpon>KullaniciGiris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KullaniciGiris.aspx.designer.cs">
+      <DependentUpon>KullaniciGiris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciKaydol.aspx.cs">
+      <DependentUpon>KullaniciKaydol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KullaniciKaydol.aspx.designer.cs">
+      <DependentUpon>KullaniciKaydol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciProfilGuncelle.aspx.cs">
+      <DependentUpon>KullaniciProfilGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KullaniciProfilGuncelle.aspx.designer.cs">
+      <DependentUpon>KullaniciProfilGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciUrunEkle.aspx.cs">
+      <DependentUpon>KullaniciUrunEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KullaniciUrunEkle.aspx.designer.cs">
+      <DependentUpon>KullaniciUrunEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciUrunGuncelle.aspx.cs">
+      <DependentUpon>KullaniciUrunGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KullaniciUrunGuncelle.aspx.designer.cs">
+      <DependentUpon>KullaniciUrunGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciUrunSilGuncelle.aspx.cs">
+      <DependentUpon>KullaniciUrunSilGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KullaniciUrunSilGuncelle.aspx.designer.cs">
+      <DependentUpon>KullaniciUrunSilGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteAnasayfa.aspx.cs">
+      <DependentUpon>SiteAnasayfa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteAnasayfa.aspx.designer.cs">
+      <DependentUpon>SiteAnasayfa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SiteForum.aspx.cs">
+      <DependentUpon>SiteForum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteForum.aspx.designer.cs">
+      <DependentUpon>SiteForum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteHakkimizda.aspx.cs">
+      <DependentUpon>SiteHakkimizda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteHakkimizda.aspx.designer.cs">
+      <DependentUpon>SiteHakkimizda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteIletisim.aspx.cs">
+      <DependentUpon>SiteIletisim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteIletisim.aspx.designer.cs">
+      <DependentUpon>SiteIletisim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteKullanici.Master.cs">
+      <DependentUpon>SiteKullanici.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteKullanici.Master.designer.cs">
+      <DependentUpon>SiteKullanici.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMaster.Master.cs">
+      <DependentUpon>SiteMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMaster.Master.designer.cs">
+      <DependentUpon>SiteMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SQLBaglanti.cs" />
+    <Compile Include="UrunDetay.aspx.cs">
+      <DependentUpon>UrunDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UrunDetay.aspx.designer.cs">
+      <DependentUpon>UrunDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49603</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49603/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

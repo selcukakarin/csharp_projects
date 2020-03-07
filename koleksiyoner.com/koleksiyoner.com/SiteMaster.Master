@@ -1,0 +1,147 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMaster.master.cs" Inherits="koleksiyoner.com.SiteMaster" %>
+
+<form runat="server">
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <script type="text/javascript">
+        function HideTr()
+        {
+            document.getElementById('sil').style.display="none";
+        }
+
+    </script>
+        <title>selçuk store</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <!--[if IE 6]>
+<link rel="stylesheet" type="text/css" href="iecss.css" />
+<![endif]-->
+        <script type="text/javascript" src="js/boxOver.js"></script>
+        <!-- Insert to your webpage before the </head> -->
+        <script src="sliderengine/jquery.js"></script>
+        <script src="sliderengine/amazingslider.js"></script>
+        <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-1.css">
+        <script src="sliderengine/initslider-1.js"></script>
+        <!-- End of head section HTML codes -->
+    </head>
+    <body>
+        <div id="main_container">
+            <div class="top_bar">
+                <div class="top_search">
+                    <div class="search_text"><a href="#">Advanced Search</a></div>
+                    <input type="text" class="search_input" name="search" />
+                    <input type="image" src="images/search.gif" class="search_bt" />
+                </div>
+                
+            </div>
+            <div id="header">
+                <div id="logo">
+                    <a href="#">
+                        <img src="images/logo.png" alt="" border="0" width="237" height="140" /></a>
+                </div>
+                <div class="oferte_content">
+                    <div class="top_divider">
+                        <img src="images/header_divider.png" alt="" width="1" height="164" />
+                    </div>
+
+                    <div class="top_divider">
+                        <img src="images/header_divider.png" alt="" width="1" height="164" />
+                    </div>
+                    <!-- Insert to your webpage where you want to display the slider -->
+                    <div id="amazingslider-wrapper-1" style="display: block; position: relative; max-width: 600px; margin: 0px auto 0px;">
+                        <div id="amazingslider-1" style="display: block; position: relative; margin: 0 auto;">
+                            <ul class="amazingslider-slides" style="display: none;">
+
+                                <asp:DataList ID="dlSlider" runat="server">
+                                    <ItemTemplate>
+                                        <li>
+                                            <img src="<%# Eval("Resim1") %>" alt="<%# Eval("UrunAdi") %>" title="<%# Eval("UrunAdi") %>" data-description="<%# Eval("UrunFiyat") %> tl" />
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:DataList>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End of body section HTML codes -->
+
+                </div>
+                <!-- end of oferte_content-->
+            </div>
+            <div id="main_content">
+                <div id="menu_tab">
+                    <div class="left_menu_corner"></div>
+                    <ul class="menu">
+                        <li><a href="SiteAnasayfa.aspx" class="nav1">Anasayfa</a></li>
+                        <li class="divider"></li>
+                        <li><a href="SiteForum.aspx" class="nav3">Forum</a></li>
+                        <li class="divider"></li>
+                        <li><a href="SiteHakkimizda.aspx" class="nav5">Hakkımızda</a></li>
+                        <li class="divider"></li>
+                        <li><a href="SiteIletisim.aspx" class="nav6">İletişim</a></li>
+                        <li class="divider"></li>
+
+                    </ul>
+                    <div class="right_menu_corner"></div>
+                </div>
+                <!-- end of menu tab -->
+                <div class="left_content">
+                    <div class="title_box">Kategoriler</div>
+                    <asp:DataList ID="DatalistKategori" runat="server">
+                        <ItemTemplate>
+                            <ul class="left_menu">
+                                <li class="odd"><a href="#">
+                                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("KategoriAdi") %>'></asp:Label>
+
+                                </a></li>
+                            </ul>
+                        </ItemTemplate>
+                    </asp:DataList>
+
+                    <asp:DataList ID="Datalist1" runat="server">
+                        <ItemTemplate>
+
+                            <div class="title_box">En son eklenen Ürün</div>
+                            <div class="border_box">
+                                <div class="product_title"><a href="details.html">
+                                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("UrunAdi") %>'></asp:Label></a></div>
+                                <div class="product_img">
+                                    <a href="details.html">
+                                        <img src="images/p2.gif" alt="" border="0" /></a>
+                                </div>
+                                <div class="prod_price"><span class="price">
+                                    <asp:Label ID="Label3" runat="server" Text='<%# Eval("UrunFiyat") %>'></asp:Label></span></div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:DataList>
+
+
+
+
+                </div>
+                <!-- end of left content -->
+                <asp:ContentPlaceHolder ID="ContentSite" runat="server"></asp:ContentPlaceHolder>
+                <!-- end of center content -->
+
+                <!-- end of right content -->
+            </div>
+            <!-- end of main content -->
+            <div class="footer">
+
+                <div class="left_footer">
+                    <img src="images/footer_logo.png" alt="" width="170" height="49" />
+                </div>
+                <div class="center_footer">
+                    Template name. All Rights Reserved 2008<br />
+                    <a href="http://csscreme.com">
+                        <img src="images/csscreme.jpg" alt="csscreme" border="0" /></a><br />
+                    <img src="images/payment.gif" alt="" />
+                </div>
+                <div class="right_footer"><a href="SiteAnasayfa.aspx">home</a> <a href="SiteHakkimizda.aspx">about</ <a href="SiteIletisim.aspx">about</a> <a href="contact.html">contact us     </div>
+        </div>
+            
+        <!-- end of main_container -->
+</form>
+
+</body>
+    </html>
